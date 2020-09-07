@@ -21,7 +21,7 @@ public class MainApp {
       userService.add(new User("User3", "Lastname3", "user3@mail.ru"));
       userService.add(new User("User4", "Lastname4", "user4@mail.ru"));
 
-      Car car5 = new Car("Lada", 2110);
+      Car car5 = new Car("Lada", "A001AA");
       userService.add(new User("User5", "Lastname5", "user5@mail.ru", car5));
 
       List<User> users = userService.listUsers();
@@ -37,6 +37,7 @@ public class MainApp {
          System.out.println();
       }
 
+      System.out.println(userService.getUserByCarSeries("A001AA").toString());
       context.close();
    }
 }

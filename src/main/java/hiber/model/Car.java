@@ -17,7 +17,7 @@ public class Car {
     private String name;
 
     @Column(name = "series")
-    private int series;
+    private String series;
 
     public long getId() {
         return id;
@@ -43,18 +43,28 @@ public class Car {
         this.name = name;
     }
 
-    public int getSeries() {
+    public String getSeries() {
         return series;
     }
 
-    public void setSeries(int series) {
+    public void setSeries(String series) {
         this.series = series;
     }
 
     public Car() {}
 
-    public Car(String name, int series) {
+    public Car(String name, String series) {
         this.name = name;
         this.series = series;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", user=" + user +
+                ", name='" + name + '\'' +
+                ", series='" + series + '\'' +
+                '}';
     }
 }
